@@ -1,0 +1,10 @@
+{
+    "id": "linkflow-plugin",
+    "name": "LinkFlow",
+    "version": "1.0.0",
+    "minAppVersion": "0.15.0",
+    "description": "Transforme vos liens en cartes visuelles style Pinterest.",
+    "author": "Vous",
+    "authorUrl": "https://github.com/votre-repo",
+    "isDesktopOnly": false
+}
