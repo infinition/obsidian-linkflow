@@ -5,43 +5,35 @@ on:
     tags:
       - "*"
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       # 1️⃣ Checkout
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      # 2️⃣ Node.js 18
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      # 2️⃣ Node
+      - uses: actions/setup-node@v3
         with:
           node-version: "18"
 
       # 3️⃣ Install deps
-      - name: Install dependencies
-        run: npm install
+      - run: npm install
 
-      # 4️⃣ Build (esbuild → main.js)
-      - name: Build plugin
-        run: npm run build
+      # 4️⃣ Build (src → main.js)
+      - run: npm run build
 
-      # 5️⃣ Package plugin (Obsidian format)
-      - name: Package plugin
-        run: |
-          mkdir release
-          cp main.js manifest.json styles.css release/
-          cp -r src release/
-          cd release
-          zip -r ../plugin.zip .
-
-      # 6️⃣ Create GitHub Release
+      # 5️⃣ Create GitHub Release (BRAT-compatible)
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            plugin.zip
+            main.js
+            manifest.json
+            styles.css
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
