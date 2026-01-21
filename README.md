@@ -1,8 +1,11 @@
+<img width="500" height="500" alt="Gemini_Generated_Image_88fjhz88fjhz88fj-removebg-preview" src="https://github.com/user-attachments/assets/2c58fa68-1e51-4877-8e8a-f4ad3f63b259" />
+
 # LinkFlow for Obsidian
+
 
 A visual, all-in-one link manager for Obsidian. Centralize your web links in a single note, and LinkFlow transforms them into a stunning gallery of cards with automatic metadata scraping, powerful filters, and reading statuses.
 
-![LinkFlow Dashboard](https://raw.githubusercontent.com/infinition/obsidian-linkflow/main/assets/preview.png) *(Placeholder for preview image)*
+
 
 ## ✨ Key Features
 
