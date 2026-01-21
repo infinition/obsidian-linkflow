@@ -8,26 +8,40 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
+    steps:
+      # 1️⃣ Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2️⃣ Node.js 18
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
-      - name: Install Dependencies
+      # 3️⃣ Install deps
+      - name: Install dependencies
         run: npm install
 
-      - name: Build Plugin
+      # 4️⃣ Build (esbuild → main.js)
+      - name: Build plugin
         run: npm run build
 
+      # 5️⃣ Package plugin (Obsidian format)
+      - name: Package plugin
+        run: |
+          mkdir release
+          cp main.js manifest.json styles.css release/
+          cp -r src release/
+          cd release
+          zip -r ../plugin.zip .
+
+      # 6️⃣ Create GitHub Release
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            main.js
-            manifest.json
-            styles.css
+            plugin.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
