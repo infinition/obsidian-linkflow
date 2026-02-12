@@ -1,4 +1,4 @@
 Contact: https://github.com/infinition/obsidian-linkflow/issues
-Expires: 2027-02-11T05:39:03.000Z
+Expires: 2027-02-12T05:27:03.000Z
 Preferred-Languages: en, fr
 Policy: https://github.com/infinition/obsidian-linkflow/blob/wiki/SECURITY.md
