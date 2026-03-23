@@ -1,6 +1,6 @@
 {
   "name": "linkflow-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Visual Link Manager for Obsidian",
   "main": "main.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "link",
     "card"
   ],
-  "author": "Vous",
+  "author": "Fabien Polly (Infinition)",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^16.11.6",
