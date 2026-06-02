@@ -1,107 +1,60 @@
 <div align="center">
-  <img width="200" height="200" alt="LinkFlow Logo" src="https://github.com/user-attachments/assets/2c58fa68-1e51-4877-8e8a-f4ad3f63b259" />
-
-  # LinkFlow for Obsidian
-  
-  **A visual, all-in-one link manager for Obsidian.**
-  
-  Centralize your web links in a single note, and LinkFlow transforms them into a stunning gallery of cards with automatic metadata scraping, powerful filters, and reading statuses.
+  <img width="200" height="200" alt="LinkFlow" src="https://github.com/user-attachments/assets/2c58fa68-1e51-4877-8e8a-f4ad3f63b259" />
 </div>
 
----
+# LinkFlow for Obsidian
 
-## 🔥 Built for Obsidian Web Clipper (Recommended Workflow)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) [![Release](https://img.shields.io/github/v/release/infinition/obsidian-linkflow?style=flat)](https://github.com/infinition/obsidian-linkflow/releases) [![Obsidian Plugin](https://img.shields.io/badge/Obsidian-Plugin-7C3AED?style=flat&logo=obsidian&logoColor=white)](https://obsidian.md/plugins?id=linkflow) [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/infinition)
 
-LinkFlow is designed to work perfectly with **Obsidian Web Clipper**:
+A visual link manager for Obsidian. Point it at a note that holds your saved URLs, and it turns every link into a card with automatically scraped title, description, image, favicon, and reading status.
 
-- You configure **Obsidian Web Clipper** to save captured pages as **links in a user-defined README / template note** (your personal “inbox” note).
-- LinkFlow then **automatically detects**, **parses**, and **processes** these incoming links.
-- Result: every clipped link becomes a **dynamic card** in LinkFlow’s dashboard, with metadata, preview image, favicon, and status tracking.
-
-This creates an ultra-fast “Clip → Auto-organize → Browse visually” workflow.
+Designed to work with Obsidian Web Clipper: clip a page, the link lands in your inbox note, LinkFlow picks it up and adds it to the dashboard automatically.
 
 ---
 
-## ⚠️ IMPORTANT: REQUIRED SETUP
+## Features
 
-**LinkFlow requires a specific Markdown file to function.** Before using the plugin, you must define where your links will be stored:
-
-1. Go to **Settings** > **LinkFlow**
-2. Locate the **Target File Path** option
-3. Select or type the path of the `.md` file you want to use (e.g., `Inbox/Links.md` or `Resources/ReadLater.md`)
-
-> **Note:** If you do not select a target file, the plugin will not know where to save/read your links and the dashboard may appear empty.
-
----
-
-## ✨ Key Features
-
-- 📸 **Automatic Metadata Scraping**  
-  Automatically fetches titles, descriptions, preview images, and favicons from any URL (including YouTube, social media, and news sites).
-
-- 🚀 **Bulk Link Extraction**  
-  Paste a block of text containing multiple URLs, and LinkFlow intelligently extracts and processes all of them at once.
-
-- 🎨 **Premium Dashboard UI**  
-  A beautiful, responsive interface with two view modes:
-  - **Grid Mode**: Perfect for visual browsing with large preview cards.
-  - **List Mode**: Ideal for quick scanning and mobile use.
-
-- 🌍 **Multi-language Support**  
-  Fully localized in 5 languages: English, French, Spanish, German, and Italian.
-
-- 📂 **Markdown-Native Storage**  
-  Your data stays in your vault. Links are stored in a simple, human-readable `linkflow` code block within the markdown file of your choice.
-
-- 🔍 **Advanced Filtering & Sorting**
-  - **Search** by title, description, or site name
-  - **Filter** by status (Unread, Read, All) or Archive
-  - **Sort** by Date Added (Newest/Oldest), Title, or Site
-
-- ⚡ **Instant Sync**  
-  The dashboard updates in real-time as you add links to your source file or modify them in the UI.
-
-- 📊 **Custom Block Rendering**  
-  The `linkflow` code block is rendered as a beautiful, interactive table in Obsidian’s Reading Mode.
+- Auto-detection of URLs in a configured target note.
+- Metadata scraping: title, description, cover image, favicon.
+- Card gallery with filters (status, tags, search).
+- Reading statuses: Unread, Reading, Done, Archived.
+- Manual link addition from the dashboard.
+- Works with any note that holds plain URLs or Markdown links.
 
 ---
 
-## 🚀 Getting Started
+## Setup
 
-### 1) Installation
-Enable **LinkFlow** in your Obsidian Community Plugins settings.
-
-### 2) Configuration (Crucial Step)
-Set your **Target File Path** (this file acts as your database / inbox).
-
-### 3) Add Links (3 ways)
-- **Via Obsidian Web Clipper (recommended):** clip pages → links land in your predefined note → LinkFlow ingests automatically.
-- **Via the Dashboard:** click the **"+"** button and paste text or URLs directly.
-- **Via the Note:** open your target `.md` file and paste URLs anywhere; LinkFlow will detect them.
-
-### 4) Open the Dashboard
-- Click the **Grid Icon** in the left ribbon  
-- Or use the Command Palette (`Ctrl/Cmd + P`) → `LinkFlow: Open Dashboard`
+1. Install and enable **LinkFlow** in Community Plugins.
+2. Open Settings and set the **Target File Path** (the note that acts as your inbox).
+3. Paste URLs into that note, or use Obsidian Web Clipper to clip pages into it.
+4. Open the dashboard: click the grid icon in the left ribbon, or run `LinkFlow: Open Dashboard` from the Command Palette.
 
 ---
 
-## 🛠️ Development
+## Development
 
-If you want to contribute or build from source:
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Build the plugin: `npm run build`
-4. Run in watch mode: `npm run dev`
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
+```bash
+git clone https://github.com/infinition/obsidian-linkflow.git
+npm install
+npm run dev    # watch mode
+npm run build  # production
+```
 
 ---
 
-## 🌟 Star History
+## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=infinition/obsidian-linkflow&type=date&legend=top-left)](https://www.star-history.com/#infinition/obsidian-linkflow&type=date&legend=top-left)
+<a href="https://www.star-history.com/?repos=infinition%2Fobsidian-linkflow&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=infinition/obsidian-linkflow&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=infinition/obsidian-linkflow&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=infinition/obsidian-linkflow&type=date&legend=top-left" />
+ </picture>
+</a>
+
+---
+
+## License
+
+MIT. See [LICENSE](LICENSE).
