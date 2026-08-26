@@ -1,5 +1,5 @@
 <div align="center">
-<img width="336" height="335" alt="image-removebg-preview (11)" src="https://github.com/user-attachments/assets/b56670ec-f6b7-40e9-85e6-39917bb5b87a" />
+<img src=".github/obsidian-linkflow.png" alt="obsidian-linkflow icon" width="336" height="335" />
 </div>
 
 # LinkFlow for Obsidian
